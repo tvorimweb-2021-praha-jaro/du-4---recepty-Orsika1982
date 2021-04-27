@@ -21,6 +21,7 @@ středně široké obrazovky:
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
 }
 
 .paticka {
@@ -37,3 +38,217 @@ body {
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
+
+
+
+
+/*salad*/
+.container_salad {
+    display:inline-block;
+    position: relative;
+}
+.title_salad {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.category_salad {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.comments_salad {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    margin: 0;
+}
+/*snack*/
+.container_snack {
+    display: inline-block;
+    position: relative;
+}
+.title_snack {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.category_snack {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.comments_snack {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    margin: 0;
+}
+/*legumes*/
+.container_legumes {
+    display: inline-block;
+    position: relative;
+}
+.title_legumes {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.category_legumes {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+
+.comments_legumes {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    margin: 0;
+}
+/*tacos*/
+.container_tacos {
+    display: inline-block;
+    position: relative;
+}
+.title_tacos {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.category_tacos {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.comments_tacos {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    margin: 0;
+}
+/*burger*/
+.container_burger {
+    display: inline-block;
+    position: relative;
+}
+.title_burger {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.category_burger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    margin: 0;
+}
+.comments_burger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+h2,
+h3 {
+    font-weight: 400;
+}
+img {
+    width: 100%;
+}
+
+/*phone*/
+
+@media screen and (max-width: 479px) {
+    .main {
+        min-height: 200px;
+    }
+    .other {
+        min-height: 90px;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    h2,
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/*tablet*/
+
+@media screen and (min-width: 480px) {
+    .main {
+        min-height: 250px;
+    }
+    .other {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 150px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2,
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/*big screen*/
+
+@media screen and (min-width: 860px) {
+    .site {
+        display: flex;
+        flex-direction: row;
+    }
+    .main {
+        min-height: 400px;
+    }
+    .other {
+        min-height: 200px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2,
+    h3 {
+        font-size: 1.75rem;
+    }
+}
+
+
+
+
+
