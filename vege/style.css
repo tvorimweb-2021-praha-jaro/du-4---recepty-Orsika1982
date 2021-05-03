@@ -21,7 +21,7 @@ středně široké obrazovky:
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
-    text-align: center;
+    justify-content: center;
 }
 
 .paticka {
@@ -38,217 +38,132 @@ body {
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
-
-
-
-
-/*salad*/
-.container_salad {
-    display:inline-block;
-    position: relative;
-}
-.title_salad {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+.container {
     color: white;
-    margin: 0;
-}
-.category_salad {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
-}
-.comments_salad {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    margin: 0;
-}
-/*snack*/
-.container_snack {
-    display: inline-block;
-    position: relative;
-}
-.title_snack {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
-}
-.category_snack {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
-}
-.comments_snack {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    margin: 0;
-}
-/*legumes*/
-.container_legumes {
-    display: inline-block;
-    position: relative;
-}
-.title_legumes {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
-}
-.category_legumes {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
 }
 
-.comments_legumes {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
+.meta {
+    display: flex;
+    justify-content: space-between;
+}
+.title {
     margin: 0;
-}
-/*tacos*/
-.container_tacos {
-    display: inline-block;
-    position: relative;
-}
-.title_tacos {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
-}
-.category_tacos {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
-}
-.comments_tacos {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    margin: 0;
-}
-/*burger*/
-.container_burger {
-    display: inline-block;
-    position: relative;
-}
-.title_burger {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
-}
-.category_burger {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: white;
-    margin: 0;
-}
-.comments_burger {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    margin: 0;
-}
-
-h1 {
+    padding: 0.5rem;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
+    font-size: 1.75rem;
 }
 
-h2,
-h3 {
+.category {
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
     font-weight: 400;
+    font-size: 1.2rem;
 }
-img {
-    width: 100%;
-}
-
-/*phone*/
-
-@media screen and (max-width: 479px) {
-    .main {
-        min-height: 200px;
-    }
-    .other {
-        min-height: 90px;
-    }
-    h1 {
-        font-size: 1.75rem;
-    }
-    h2,
-    h3 {
-        font-size: 1.2rem;
-    }
+.comments {
+    text-decoration: none;
+    color: white;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
-/*tablet*/
+.salad {
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url('images/salat.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+}
+
+.toast {
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url('images/chlebicek.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.legumes {
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url('images/cizrna.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.tacos {
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url('images/tacos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.burger {    
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url('images/burger.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 @media screen and (min-width: 480px) {
-    .main {
-        min-height: 250px;
-    }
-    .other {
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        min-height: 150px;
-    }
-    h1 {
+    .title {
         font-size: 2rem;
     }
-    h2,
-    h3 {
+    .category,
+    .comments {
         font-size: 1.5rem;
     }
-}
-
-/*big screen*/
-
-@media screen and (min-width: 860px) {
-    .site {
+    .sub-recipes {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
     }
-    .main {
-        min-height: 400px;
+    .salad {
+        min-height: 250px;
     }
-    .other {
-        min-height: 200px;
-    }
-    h1 {
-        font-size: 3rem;
-    }
-    h2,
-    h3 {
-        font-size: 1.75rem;
+    .toast,
+    .legumes,
+    .tacos,
+    .burger {
+        min-height: 150px;
+        max-width: 340px;
     }
 }
 
-
-
-
-
+@media screen and (min-width: 680px) {
+    .title {
+        font-size: 3rem;
+    }
+    .category,
+    .comments {
+        font-size: 1.75rem;
+    }
+  .container {
+        display: flex;
+        max-height: 400px;
+    }
+    .salad {
+        min-height: 400px;
+    }
+    .sub-recipes {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 680px;
+        flex-grow: 1;
+    }
+    .toast,
+    .legumes,
+    .tacos,
+    .burger {
+        min-height: 200px;
+        max-width: 340px;
+    }
+}
