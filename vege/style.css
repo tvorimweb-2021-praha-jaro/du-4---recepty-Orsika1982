@@ -1,27 +1,13 @@
-/* nejsme vcerejsi, pouzivame moderni box model */
+
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
 
 
-/* -------------------------------------------------- */
-
-/*
-pouzivame mobile first pristup
-tj. vychozi styly mimo media query jsou pro nejmensi mobilni zarizeni
-s pribyvajici sirkou pridavame media query pro
-středně široké obrazovky:
-@media (min-width: 480px) {
-}
-široké obrazovky
-@media (min-width: 860px) {
-}
-*/
-
 
 body {
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
     justify-content: center;
+    color: white;
 }
 
 .paticka {
@@ -32,138 +18,139 @@ body {
 
 .paticka a {
     color: silver;
+    text-shadow: none;
 }
 
 
-/* ------------------------------- */
-/* ----- DOLE BUDE TVOJE CSS ----- */
-/* ------------------------------- */
-.container {
-    color: white;
-}
-
-.meta {
-    display: flex;
-    justify-content: space-between;
-}
-.title {
-    margin: 0;
+.menu {
     padding: 0.5rem;
-    font-family: 'Raleway', sans-serif;
+}
+
+.main h1 {
     font-weight: 800;
     font-size: 1.75rem;
 }
 
-.category {
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-    font-weight: 400;
+h1 {
+    font-weight: 800;
     font-size: 1.2rem;
+    font-family: Raleway;
+    margin: 0;
+    text-shadow: 1px 1px grey;
+    padding: 0.5rem;
 }
-.comments {
+
+h2, 
+a {
+    font-weight: 400;
+    font-size: 0.8rem;
+    font-family: source sans pro;
+    margin: 0;
+    text-shadow: 1px 1px grey;
+    padding: 0.5rem;
     text-decoration: none;
     color: white;
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
-    font-weight: 400;
-    font-size: 1.2rem;
 }
 
-.salad {
+.sub-title {
     display: flex;
+    justify-content: space-between;
+}
+.main {
+    display: flex;
+    background-image: url(images/salat.jpg);
     flex-direction: column-reverse;
-    background-image: url('images/salat.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     min-height: 200px;
-}
-
-.toast {
-    display: flex;
-    flex-direction: column-reverse;
-    background-image: url('images/chlebicek.jpg');
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border: white 1px solid;
+    justify-content: space-between;
+}
+
+.snack, 
+.mexico,
+.legumes,
+.burger {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
+    border: white 1px solid;
+    justify-content: space-between;
+}
+.snack {
+    background-image: url(images/chlebicek.jpg);
+}
+
+.mexico {
+    background-image: url(images/tacos.jpg);
 }
 
 .legumes {
-    display: flex;
-    flex-direction: column-reverse;
-    background-image: url('images/cizrna.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url(images/cizrna.jpg);
 }
-.tacos {
-    display: flex;
-    flex-direction: column-reverse;
-    background-image: url('images/tacos.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.burger {    
-    display: flex;
-    flex-direction: column-reverse;
-    background-image: url('images/burger.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+.burger {
+    background-image: url(images/burger.jpg);
 }
 
 @media screen and (min-width: 480px) {
-    .title {
+    .main h1 {
         font-size: 2rem;
     }
-    .category,
-    .comments {
-        font-size: 1.5rem;
+    h1 {
+        font-size: 1.5rem ;
     }
-    .sub-recipes {
+    .main {
+        min-height: 250px;
+    }
+    .sub-recipe {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
-    .salad {
-        min-height: 250px;
-    }
-    .toast,
+
+    .snack, 
+    .mexico,
     .legumes,
-    .tacos,
     .burger {
         min-height: 150px;
-        max-width: 340px;
-    }
+        flex-basis: 50%;
+}   
 }
 
-@media screen and (min-width: 680px) {
-    .title {
+@media screen and (min-width: 860px) {
+    .main h1 {
         font-size: 3rem;
     }
-    .category,
-    .comments {
+    h1 {
         font-size: 1.75rem;
+        padding: 1.25rem;
     }
-  .container {
+    h2, 
+    a   { 
+        padding: 1.2rem;
+    }
+     .menu {
         display: flex;
-        max-height: 400px;
+        flex-direction: row;
     }
-    .salad {
+    .main {
         min-height: 400px;
-    }
-    .sub-recipes {
         display: flex;
-        flex-wrap: wrap;
-        min-width: 680px;
-        flex-grow: 1;
+        flex-basis: calc(100%/3);
     }
-    .toast,
+    .sub-recipe {
+        flex-basis: calc(100%*2/3);
+    }
+    .snack,
+    .mexico,
     .legumes,
-    .tacos,
     .burger {
         min-height: 200px;
-        max-width: 340px;
     }
+
 }
